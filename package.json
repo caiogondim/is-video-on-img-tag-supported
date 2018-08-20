@@ -1,0 +1,25 @@
+{
+  "name": "is-video-on-img-tag-supported",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-video-blob": "node scripts/generate-video-blob.js",
+    "build": "npm run generate-video-blob && browserify src/index.js -o build/index.js -v && browserify src/index.js -o build/global.js -v --standalone isVideoOnImgTagSupported"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiogondim/is-video-on-img-tag-supported.git"
+  },
+  "keywords": [],
+  "author": "Caio Gondim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caiogondim/is-video-on-img-tag-supported/issues"
+  },
+  "homepage": "https://github.com/caiogondim/is-video-on-img-tag-supported#readme",
+  "devDependencies": {
+    "browserify": "^16.2.2"
+  }
+}
